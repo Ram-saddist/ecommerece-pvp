@@ -6,6 +6,7 @@ const port =process.env.PORT
 const connectDB =require("./config/db")
 const authRoutes =require("./routes/auth")
 const adminRoutes=require("./routes/adminAuth")
+const productRoutes= require("./routes/productRoutes")
 app.use(cors())
 app.use(express.urlencoded({
     extended:true
@@ -14,5 +15,6 @@ app.use(express.json())
 connectDB()
 app.use("/api/auth",authRoutes)
 app.use("/api/admin",adminRoutes)
+app.use("/api/product",productRoutes)
 
 app.listen(port,()=>console.log("Server is running on port:",port))
