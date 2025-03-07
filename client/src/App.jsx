@@ -6,6 +6,7 @@ import Login from './Login/Login'
 import { AuthProvider } from './context/AuthContext'
 import Navigation from './Navigation/Navigation'
 import AddProduct from './AddProduct/AddProduct'
+import Cart from './Cart/Cart'
 export default function App() {
   return (
     <div>
@@ -17,6 +18,7 @@ export default function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/add-product" element={<AddProduct/>}/>
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </AuthProvider>
       </BrowserRouter>
