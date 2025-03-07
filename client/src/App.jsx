@@ -5,6 +5,7 @@ import Register from './Register/Register'
 import Login from './Login/Login'
 import { AuthProvider } from './context/AuthContext'
 import Navigation from './Navigation/Navigation'
+import AddProduct from './AddProduct/AddProduct'
 export default function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/add-product" element={<AddProduct/>}/>
           </Routes>
         </AuthProvider>
       </BrowserRouter>
